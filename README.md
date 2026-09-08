@@ -41,72 +41,88 @@ A browser-based Tic Tac Toe game with a **React + TypeScript** frontend and a **
 
 ---
 
-## Running Locally
+## Getting Started from GitHub
 
 ### Prerequisites
 
-| Tool | Minimum Version |
-|---|---|
-| .NET SDK | 9.0 |
-| Node.js | 20.x |
-| npm | 10.x |
+Make sure the following tools are installed before cloning:
 
-### 1. Start the Backend
+| Tool | Minimum Version | Download |
+|---|---|---|
+| .NET SDK | 9.0 | https://dotnet.microsoft.com/download |
+| Node.js | 20.x | https://nodejs.org |
+| npm | 10.x | Comes bundled with Node.js |
+| Git | Any recent version | https://git-scm.com |
+
+---
+
+### Step 1 — Clone the Repository
 
 ```bash
-cd TicTacToe/backend/TicTacToe.API
+git clone https://github.com/anupam-cse16/TicTacToe_FullStack.git
+cd TicTacToe_FullStack
+```
+
+---
+
+### Step 2 — Start the Backend
+
+```bash
+cd backend/TicTacToe.API
 dotnet run
 ```
 
-The API runs at **`http://localhost:5043`**.
+- The API starts at **`http://localhost:5043`**
+- SQLite database (`tictactoe.db`) is **created automatically** on first run — no manual DB setup needed
+- Interactive API docs available at:
+  - **Swagger UI**: http://localhost:5043/swagger
+  - **Scalar UI**: http://localhost:5043/scalar/v1
+  - **OpenAPI JSON**: http://localhost:5043/openapi/v1.json
 
-> **Swagger UI**: `http://localhost:5043/swagger`  
-> **Scalar API Docs**: `http://localhost:5043/scalar/v1`  
-> **OpenAPI JSON**: `http://localhost:5043/openapi/v1.json`
+> Keep this terminal open and open a **new terminal** for the frontend step.
 
-### 2. Start the Frontend
+---
+
+### Step 3 — Start the Frontend
 
 ```bash
-cd TicTacToe/frontend/tictactoe-ui
+cd frontend/tictactoe-ui
 npm install
 npm run dev
 ```
 
-The app runs at **`http://localhost:5173`**.
-
-Open your browser at `http://localhost:5173` to play.
+- The app starts at **`http://localhost:5173`**
+- Open your browser and navigate to **http://localhost:5173** to play
 
 ---
 
-## Running Tests & Code Coverage
+### Step 4 (Optional) — Run Tests
 
-### Backend Tests (xUnit + FluentAssertions + Coverlet)
-
+**Backend Tests** (from the `backend/` folder):
 ```bash
-cd TicTacToe/backend
+cd backend
 dotnet test
 ```
 
-For full code coverage report:
+With code coverage:
 ```bash
 dotnet test --collect:"XPlat Code Coverage"
 ```
+Expected: **90 tests passing · 96.15% line coverage**
 
-Expected: **84 tests passing (96.55% line coverage)**
+---
 
-### Frontend Tests (Vitest + React Testing Library + v8 Coverage)
-
+**Frontend Tests** (from the `frontend/tictactoe-ui/` folder):
 ```bash
-cd TicTacToe/frontend/tictactoe-ui
+cd frontend/tictactoe-ui
 npm test
 ```
 
-For coverage report with thresholds:
+With coverage report:
 ```bash
 npm test -- --coverage
 ```
-
-Expected: **56 tests passing across 9 test files (100% line coverage, 97.74% branch coverage)**
+Expected: **56 tests passing · 100% line coverage · 97.74% branch coverage**
 
 ---
 
