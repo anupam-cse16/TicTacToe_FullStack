@@ -1,0 +1,35 @@
+:root {
+  --color-x: #63b3ed;
+  --color-o: #fc8181;
+  --color-bg-base: #0f1117;
+  --color-bg-surface: #1a202c;
+  --color-bg-subtle: #2d3748;
+  --color-bg-hover: #4a5568;
+  --color-border: #2d3748;
+  --color-border-hover: #4a5568;
+  --color-text-main: #e2e8f0;
+  --color-text-muted: #718096;
+  --color-accent: #4299e1;
+  --color-accent-subtle: rgba(66, 153, 225, 0.15);
+  --color-win: #1c4532;
+  --color-win-border: #48bb78;
+  --radius-cell: 12px;
+  --radius-panel: 14px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-bg-base);
+  color: var(--color-text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}

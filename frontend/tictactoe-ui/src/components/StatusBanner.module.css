@@ -1,0 +1,53 @@
+.banner {
+  padding: 14px 28px;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-panel);
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
+  min-width: 350px;
+  width: 100%;
+  color: var(--color-text-main);
+  transition: all 0.2s ease;
+}
+
+.won {
+  border-color: var(--color-win-border);
+  background: var(--color-win);
+  color: #c6f6d5;
+}
+
+.draw {
+  border-color: #d69e2e;
+  background: #744210;
+  color: #fefcbf;
+}
+
+.xText {
+  color: var(--color-x);
+  font-weight: 700;
+}
+
+.oText {
+  color: var(--color-o);
+  font-weight: 700;
+}
+
+.thinkingEllipsis::after {
+  content: '';
+  display: inline-block;
+  width: 1.8em;
+  text-align: left;
+  animation: ellipsis 1.4s steps(4, end) infinite;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+@keyframes ellipsis {
+  0%   { content: ''; }
+  25%  { content: '.'; }
+  50%  { content: '..'; }
+  75%  { content: '...'; }
+  100% { content: ''; }
+}

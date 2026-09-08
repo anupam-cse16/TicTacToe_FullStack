@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.modeLabel {
+  font-size: 0.82rem;
+  color: #718096;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.modeBtn {
+  padding: 9px 18px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 22px;
+  border: 2px solid #4a5568;
+  background: transparent;
+  color: #a0aec0;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.modeBtn.active {
+  border-color: #4299e1;
+  background: rgba(66, 153, 225, 0.15);
+  color: #bee3f8;
+}
+
+.modeBtn:hover:not(:disabled):not(.active) {
+  border-color: #718096;
+  color: #e2e8f0;
+}
+
+.modeBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Vertical divider between mode toggles and action buttons */
+.divider {
+  width: 1px;
+  height: 28px;
+  background: #2d3748;
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+
+.btn {
+  padding: 9px 22px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+}
+
+.resetBtn {
+  background: #2d3748;
+  color: #e2e8f0;
+}
+
+.resetBtn:hover:not(:disabled) {
+  background: #4a5568;
+}
+
+.undoBtn {
+  background: rgba(180, 83, 9, 0.4);
+  color: #fef3c7;
+  border: 1px solid #92400e;
+}
+
+.undoBtn:hover:not(:disabled) {
+  background: rgba(180, 83, 9, 0.65);
+  border-color: #b45309;
+}

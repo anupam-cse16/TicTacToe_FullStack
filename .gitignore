@@ -1,0 +1,25 @@
+# Build & Compilation outputs
+**/bin/
+**/obj/
+**/TestResults/
+**/coverage/
+
+# Dependencies
+**/node_modules/
+**/dist/
+**/.vite/
+
+# IDE & Editor caches
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS & Environment
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+*.log
