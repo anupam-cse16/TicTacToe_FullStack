@@ -23,3 +23,20 @@ Thumbs.db
 ehthumbs.db
 desktop.ini
 *.log
+
+# SQLite database files
+*.db
+*.db-wal
+*.db-shm
+
+# Environment variable files
+.env
+.env.local
+.env.*.local
+
+# Visual Studio folder
+.vs/
+
+# Coverage reports
+coverage.cobertura.xml
+*.coveragexml
